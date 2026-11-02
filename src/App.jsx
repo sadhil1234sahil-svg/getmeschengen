@@ -11,6 +11,7 @@ import ExceptionalSupport from './components/ExceptionalSupport';
 import FaqSection from './components/FaqSection';
 import Footer from './components/Footer';
 import ConfirmationModal from './components/ConfirmationModal';
+import FloatingActions from './components/FloatingActions';
 
 export default function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -28,7 +29,7 @@ export default function App() {
   return (
     <div className="site-wrapper">
       <Header />
-      <main>
+      <main id="main-content">
         <Hero />
         <StatsBar />
         <WhyUs />
@@ -40,6 +41,7 @@ export default function App() {
         <FaqSection />
       </main>
       <Footer />
+      <FloatingActions />
       <ConfirmationModal 
         isOpen={modalOpen} 
         onClose={handleCloseModal} 
@@ -48,4 +50,3 @@ export default function App() {
     </div>
   );
 }
-
